@@ -21,11 +21,10 @@ COPY startwm.sh /etc/xrdp/
 
 RUN chmod a+x /etc/xrdp/startwm.sh
 
-RUN useradd foo && \
-    echo foo:bar | chpasswd
-
-
-CMD xrdp-sesman && xrdp -n 
+COPY run.sh /
+RUN chmod +x /run.sh
 
 EXPOSE 3389
+
+ENTRYPOINT ["/run.sh"]
 
