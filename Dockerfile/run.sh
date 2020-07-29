@@ -30,6 +30,10 @@ while [ $# -ne 0 ]; do
     echo $1:$2 | chpasswd 
     wait
     #echo "sudo is $3"
+    if [[ $3 == "yes" ]]; then
+        usermod -aG wheel $1
+    fi
+    wait
     echo "user '$1' is added"
 
     # Shift all the parameters down by three

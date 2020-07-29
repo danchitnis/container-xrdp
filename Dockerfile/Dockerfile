@@ -6,15 +6,18 @@ RUN amazon-linux-extras install mate-desktop1.x
 
 RUN yum -y install openssh-server
 
-RUN yum -y install nano
-
 RUN bash -c 'echo PREFERRED=/usr/bin/mate-session > /etc/sysconfig/desktop'
 
 RUN amazon-linux-extras enable epel
 
-RUN yum install -y epel-release
+#RUN yum install -y epel-release
+RUN amazon-linux-extras install epel
 
 RUN yum install -y xrdp xorgxrdp
+
+RUN yum -y install sudo nload passwd nano
+
+RUN yum -y install pluma caja-open-terminal
 
 COPY xrdp.ini /etc/xrdp/
 COPY startwm.sh /etc/xrdp/
