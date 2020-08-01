@@ -12,12 +12,12 @@ RUN yum install -y xrdp xorgxrdp
 
 RUN yum -y install sudo nload passwd nano
 
-COPY ../build/xrdp.ini /etc/xrdp/
-COPY ../build/startwm.sh /etc/xrdp/
+COPY /build/xrdp.ini /etc/xrdp/
+COPY /build/startwm.sh /etc/xrdp/
 
 RUN chmod a+x /etc/xrdp/startwm-xfce.sh
 
-COPY ../build/run.sh /
+COPY /build/run.sh /
 RUN chmod +x /run.sh
 
 EXPOSE 3389
