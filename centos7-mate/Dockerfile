@@ -17,7 +17,7 @@ RUN yum -y install pluma caja-open-terminal
 COPY ../build/xrdp.ini /etc/xrdp/
 COPY ../build/startwm.sh /etc/xrdp/
 
-RUN chmod a+x /etc/xrdp/startwm.sh
+RUN chmod a+x /etc/xrdp/startwm-mate.sh
 
 COPY ../build/run.sh /
 RUN chmod +x /run.sh
