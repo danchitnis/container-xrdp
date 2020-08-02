@@ -1,3 +1,5 @@
+# https://github.com/danchitnis/container-xrdp
+
 FROM amazonlinux:latest
 
 RUN yum -y update
@@ -19,7 +21,9 @@ RUN yum -y install pluma caja-open-terminal
 COPY ./build/xrdp.ini /etc/xrdp/
 COPY ./build/startwm-mate.sh /etc/xrdp/
 
-RUN chmod a+x /etc/xrdp/startwm-mate.sh
+RUN mv /etc/xrdp/startwm-mate.sh /etc/xrdp/startwm.sh
+
+RUN chmod a+x /etc/xrdp/startwm.sh
 
 COPY ./build/run.sh /
 RUN chmod +x /run.sh
