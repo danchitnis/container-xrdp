@@ -11,6 +11,7 @@ First pull the container with the appropriate tag. the following tag combination
 - danchitnis/xrdp:centos7-mate
 - danchitnis/xrdp:centos7-xfce
 - danchitnis/xrdp:centos8-xfce
+- danchitnis/xrdp:fedora-xfce
 
 Example:
 
