@@ -21,6 +21,8 @@ wait
 #docker build -t $REPO:centos8-mate -f ./centos8-mate/Dockerfile .
 wait
 docker build -t $REPO:centos8-xfce -f ./centos8-xfce/Dockerfile .
+wait
+docker build -t $REPO:fedora-xfce -f ./fedora-xfce/Dockerfile .
 
 
 echo "build process is finished"
