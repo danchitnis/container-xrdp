@@ -73,4 +73,5 @@ Notice that to give sudo ability, the third input parameter for each user should
 ## Contributions
 
 Inspired by [frxyt/docker-xrdp](https://github.com/frxyt/docker-xrdp)
+
 Ubuntu commands by [danielguerra69/ubuntu-xrdp](https://github.com/danielguerra69/ubuntu-xrdp/)
