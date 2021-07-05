@@ -1,6 +1,6 @@
 # container-xrdp
 
-Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/neutrinolabs/xorgxrdp) and [Xvnc](https://tigervnc.org/)) currently based on [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [CentOS](https://www.centos.org/), [Fedora](https://getfedora.org/), and [Ubuntu](https://ubuntu.com/). Full desktop environments [Mate](https://mate-desktop.org/) and [Xfce](https://www.xfce.org/) are supported. No privilege or sys_cap is required on the host system.
+Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/neutrinolabs/xorgxrdp) and [Xvnc](https://tigervnc.org/)) currently based on [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [CentOS](https://www.centos.org/), [Fedora](https://getfedora.org/), and [Ubuntu](https://ubuntu.com/). Full desktop environments [Mate](https://mate-desktop.org/) and [Xfce](https://www.xfce.org/) are supported. No privilege or sys_cap is required on the host system. These containers are lightweight and ideal for rapid development and testing purposes.
 
 ## How to use
 
