@@ -1,6 +1,6 @@
 # container-xrdp
 
-Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/neutrinolabs/xorgxrdp) and [Xvnc](https://tigervnc.org/)) currently based on [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [CentOS](https://www.centos.org/), [Fedora](https://getfedora.org/), and [Ubuntu](https://ubuntu.com/). Full desktop environments [Mate](https://mate-desktop.org/) and [Xfce](https://www.xfce.org/) are supported. No privilege or sys_cap is required on the host system. These containers are lightweight and ideal for rapid development and testing purposes.
+Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/neutrinolabs/xorgxrdp) and [Xvnc](https://tigervnc.org/)) currently based on [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [CentOS](https://www.centos.org/), [Fedora](https://getfedora.org/), and [Ubuntu](https://ubuntu.com/). Full desktop environments [Mate](https://mate-desktop.org/) and [Xfce](https://www.xfce.org/) are supported. No privilege or sys_cap is required on the host system. These containers are lightweight and ideal for rapid development and testing purposes. Notice that the state of the container is not persisted between runs. In order to persist the state of the container, see [this guide](https://stackoverflow.com/questions/44480740/how-to-save-a-docker-container-state).
 
 ## How to use
 
@@ -70,8 +70,14 @@ sudo yum update
 
 Notice that to give sudo ability, the third input parameter for each user should be explicitly _yes_, otherwise any other input will be ignored.
 
+## Build
+
+Check the following [guide](https://github.com/danchitnis/container-xrdp/blob/master/build.md) for building your own containers.
+
 ## Contributions
 
 Inspired by [frxyt/docker-xrdp](https://github.com/frxyt/docker-xrdp)
 
 Ubuntu commands by [danielguerra69/ubuntu-xrdp](https://github.com/danielguerra69/ubuntu-xrdp/)
+
+xrdp service restrat by [timwa0669](https://github.com/timwa0669)

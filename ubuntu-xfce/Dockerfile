@@ -28,6 +28,7 @@ RUN apt-get install -y \
 
 COPY ./build/ubuntu-run.sh /usr/bin/
 RUN mv /usr/bin/ubuntu-run.sh /usr/bin/run.sh
+RUN chmod +x /usr/bin/run.sh
 
 # https://github.com/danielguerra69/ubuntu-xrdp/blob/master/Dockerfile
 RUN mkdir /var/run/dbus && \
