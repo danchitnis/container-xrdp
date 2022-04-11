@@ -6,13 +6,14 @@ Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/ne
 
 First pull the container with the appropriate tag. the following tag combinations are available:
 
-- danchitnis/xrdp:amazon-mate
-- danchitnis/xrdp:amazon-xfce
-- danchitnis/xrdp:centos7-mate
-- danchitnis/xrdp:centos7-xfce
-- danchitnis/xrdp:centos8-xfce
 - danchitnis/xrdp:fedora-xfce
 - danchitnis/xrdp:ubuntu-xfce
+- danchitnis/xrdp:amazon-mate
+- danchitnis/xrdp:amazon-xfce
+- danchitnis/xrdp:centos7-mate (no longer supported)
+- danchitnis/xrdp:centos7-xfce (no longer supported)
+- danchitnis/xrdp:centos8-xfce (no longer supported)
+
 
 Example:
 
