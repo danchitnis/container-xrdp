@@ -6,19 +6,18 @@ Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/ne
 
 First pull the container with the appropriate tag. the following tag combinations are available:
 
-- danchitnis/xrdp:fedora-xfce
 - danchitnis/xrdp:ubuntu-xfce
-- danchitnis/xrdp:amazon-mate
-- danchitnis/xrdp:amazon-xfce
+- danchitnis/xrdp:fedora-xfce
+- danchitnis/xrdp:amazon-mate (no longer supported)
+- danchitnis/xrdp:amazon-xfce (no longer supported)
 - danchitnis/xrdp:centos7-mate (no longer supported)
 - danchitnis/xrdp:centos7-xfce (no longer supported)
 - danchitnis/xrdp:centos8-xfce (no longer supported)
 
-
 Example:
 
 ```bash
-docker pull danchitnis/xrdp:fedora-xfce
+docker pull danchitnis/xrdp:ubuntu-xfce
 ```
 
 You have to give username, password, and sudo ability as input arguments to the docker run command. Hence, each user has three parameters. The process will exit if the input arguments are incorrect. Please run as interactive mode at first instance.
@@ -26,13 +25,13 @@ You have to give username, password, and sudo ability as input arguments to the 
 Example when username is _foo_, password is _bar_ and sudo ability is _no_:
 
 ```bash
-docker run -it -p 33890:3389 danchitnis/xrdp:fedora-xfce foo bar no
+docker run -it -p 33890:3389 danchitnis/xrdp:ubuntu-xfce foo bar no
 ```
 
 Similarly for detached mode
 
 ```bash
-docker run -d -p 33890:3389 danchitnis/xrdp:fedora-xfce foo bar no
+docker run -d -p 33890:3389 danchitnis/xrdp:ubuntu-xfce foo bar no
 ```
 
 Once running, open Remote Desktop Connection. Enter "localhost:33890" as the address.
@@ -50,7 +49,7 @@ Example:
 | baz | cox | no |
 
 ```bash
-docker run -it -p 33890:3389 danchitnis/xrdp:fedora-xfce foo bar yes baz qux no
+docker run -it -p 33890:3389 danchitnis/xrdp:ubuntu-xfce foo bar yes baz qux no
 ```
 
 ## Sudo users
@@ -60,7 +59,7 @@ Adding a sudo user will give that user sudo ability so that you can run privileg
 For example start docker container with
 
 ```bash
-docker run -d -p 33890:3389 danchitnis/xrdp:fedora-xfce foo bar yes
+docker run -d -p 33890:3389 danchitnis/xrdp:ubuntu-xfce foo bar yes
 ```
 
 Once _inside_ the container user _foo_ can do this
