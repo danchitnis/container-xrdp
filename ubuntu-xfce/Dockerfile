@@ -2,7 +2,7 @@
 
 FROM ubuntu:latest
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -y update 
 RUN apt-get -y upgrade
@@ -18,6 +18,9 @@ RUN apt-get install -y \
     xfce4-xkb-plugin 
 
 RUN apt-get install -y \
+    dbus-x11 
+
+RUN apt-get install -y \
     sudo \
     wget \
     xorgxrdp \
@@ -29,13 +32,6 @@ RUN apt-get install -y \
 COPY ./build/ubuntu-run.sh /usr/bin/
 RUN mv /usr/bin/ubuntu-run.sh /usr/bin/run.sh
 RUN chmod +x /usr/bin/run.sh
-
-# https://github.com/danielguerra69/ubuntu-xrdp/blob/master/Dockerfile
-RUN mkdir /var/run/dbus && \
-    cp /etc/X11/xrdp/xorg.conf /etc/X11 && \
-    sed -i "s/console/anybody/g" /etc/X11/Xwrapper.config && \
-    sed -i "s/xrdp\/xorg/xorg/g" /etc/xrdp/sesman.ini && \
-    echo "xfce4-session" >> /etc/skel/.Xsession
 
 
 # Docker config
