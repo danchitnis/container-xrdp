@@ -1,6 +1,6 @@
 # container-xrdp
 
-Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/neutrinolabs/xorgxrdp) and [Xvnc](https://tigervnc.org/)) currently based on [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [CentOS](https://www.centos.org/), [Fedora](https://getfedora.org/), and [Ubuntu](https://ubuntu.com/). Full desktop environment [Xfce](https://www.xfce.org/) is supported on both amd64 and arm64 hardware. No privilege or sys_cap is required on the host system. These containers are lightweight and ideal for rapid development and testing purposes. Notice that the state of the container is not persisted between runs. In order to persist the state of the container, see [this guide](https://stackoverflow.com/questions/44480740/how-to-save-a-docker-container-state).
+Docker container for [xrdp](http://xrdp.org/) (both [Xorg](https://github.com/neutrinolabs/xorgxrdp) and [Xvnc](https://tigervnc.org/)) currently based on [Fedora](https://getfedora.org/), and [Ubuntu](https://ubuntu.com/). Full desktop environment [Xfce](https://www.xfce.org/) is supported on both amd64 and arm64 hardware. No privilege or sys_cap is required on the host system. These containers are lightweight and ideal for rapid development and testing purposes. Notice that the state of the container is not persisted between runs. In order to persist the state of the container, see [this guide](https://stackoverflow.com/questions/44480740/how-to-save-a-docker-container-state).
 
 ## How to use
 
@@ -45,15 +45,15 @@ Nightly builds are available for the following tags:
 - danchitnis/xrdp:ubuntu-xfce-next
 - danchitnis/xrdp:fedora-xfce-next
 
-simply replace the tag with the nightly tag to pull the nightly build.
+simply replace the tag with the nightly tag to pull and run the nightly build.
 
 Example:
 
 ```bash
-docker pull danchitnis/xrdp:ubuntu-xfce-next
+docker run -it -p 33890:3389 danchitnis/xrdp:ubuntu-xfce-next foo bar no
 ```
 
-Please note that these nightly builds are not tested and may not work as expected.
+Please note that these nightly builds are built automatically and have not been tested. As a result, they may not work as expected. If the login fails, please try using the main tag.
 
 ## Adding more users
 
