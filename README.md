@@ -38,12 +38,12 @@ Once running, open Remote Desktop Connection. Enter "localhost:33890" as the add
 
 In this example username is _foo_ and the password is _bar_.
 
-## Nightly builds
+## Weekly builds
 
-Nightly builds are available for the following tags:
+Weekly builds are available for the following tags:
 
 - danchitnis/xrdp:ubuntu-xfce-next
-- danchitnis/xrdp:fedora-xfce-next
+- danchitnis/xrdp:fedora-xfce-next (temporarily disabled)
 
 simply replace the tag with the nightly tag to pull and run the nightly build.
 
