@@ -1,6 +1,8 @@
 # https://github.com/danchitnis/container-xrdp
 
 FROM ubuntu:latest
+ARG ADDITIONAL_PACKAGES=""
+ENV ADDITIONAL_PACKAGES=${ADDITIONAL_PACKAGES}
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -15,7 +17,9 @@ RUN apt-get install -y \
     xfce4-screenshooter \
     xfce4-taskmanager \
     xfce4-terminal \
-    xfce4-xkb-plugin 
+    xfce4-xkb-plugin \
+    $ADDITIONAL_PACKAGES
+
 
 RUN apt-get install -y \
     dbus-x11 
