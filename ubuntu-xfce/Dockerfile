@@ -1,6 +1,6 @@
 # https://github.com/danchitnis/container-xrdp
 
-FROM ubuntu:latest
+FROM ubuntu:jammy
 
 ENV DEBIAN_FRONTEND=noninteractive
 
